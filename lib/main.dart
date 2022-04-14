@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 main() => runApp(Pomodoro());
 
@@ -15,18 +16,22 @@ class PomodoroAppState extends State<Pomodoro> {
       home: Scaffold(
         appBar: AppBar(
           title: const Text("Pomodoro"),
-          backgroundColor: const Color.fromARGB(255, 78, 78, 78),
+          backgroundColor: Color(0xFF4E4E4E),
         ),
         body: Container(
           width: double.infinity,
+          decoration: BoxDecoration(color: Color(0xE5E5E5)),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Text(
-                'Teste',
-                style: TextStyle(color: Colors.black, fontSize: 46),
-              )
+              Text(
+                '00:00',
+                style: GoogleFonts.roboto(
+                    fontSize: 112,
+                    color: Color(0xFF4E4E4E),
+                    fontWeight: FontWeight.w900),
+              ),
             ],
           ),
         ),
